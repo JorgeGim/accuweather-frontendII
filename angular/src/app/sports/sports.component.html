@@ -1,0 +1,14 @@
+<h1>Welcome to sports information app</h1>
+<h3>Select a sport to see when you can do it</h3>
+<ul class="sports">
+  <li *ngFor="let sport of sports" (click)="onSelect(sport)">
+       {{sport.name}}
+  </li>
+</ul>
+
+<h3 class="daysSelectionHeading">Select the number of days you want to practice <input id="numberOfDays" type="number"  min="1" max="5"></h3><br><br>
+
+<app-list-days [days]="days"></app-list-days>
+
+
+

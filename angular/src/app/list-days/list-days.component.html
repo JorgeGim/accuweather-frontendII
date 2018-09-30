@@ -1,0 +1,18 @@
+    <div *ngIf="days">
+      <table class="center" id="tableData">
+        <tr>
+          <th class="th">Day</th>
+          <th class="th">Minimum Temperature</th>
+          <th class="th">Maximum Temperature</th>
+          <th class="th">Rains</th>
+        </tr>
+        <tr *ngFor="let day of days"
+          [ngStyle]="{'background-color': getColor(day.statusToPractice.toString())}">
+          <td class="td" id="dayName">{{day.dayName}}</td>
+          <td class="td">{{day.messageAboutMinimumTemperature}}</td>
+          <td class="td">{{day.messageAboutMaximumTemperature}}</td>
+          <td class="td">{{day.messageAboutRains}}</td>
+        </tr>
+      </table>
+    </div>
+
